@@ -30,6 +30,9 @@ mongoose.connect(MONGODB_URI)
 app.use('/api/experiences', experiencesRouter);
 app.use('/api/bookings', bookingsRouter);
 app.use('/api/promo', promoRouter);
+app.get('/', (req, res) => {
+  res.send('HD Booking API is running. Visit /api/experiences for experience data.');
+});
 
 // Health check
 app.get('/api/health', (req, res) => {
