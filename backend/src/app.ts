@@ -14,6 +14,10 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/hd-boo
 
 // Middleware
 app.use(cors());
+const corsOptions = {
+  origin: 'https://hd-booking-bhurzyve5-shubhsaha1119-8691s-projects.vercel.app/'
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
