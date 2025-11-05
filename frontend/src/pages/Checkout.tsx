@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import type { Experience, BookingRequest } from '../types/index';
+import type { BookingRequest } from '../types/index';
 import { bookingApi, promoApi } from '../services/api';
 
 const Checkout = () => {
